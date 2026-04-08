@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>不進化就等死</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud">
+        <span>擊殺:<span id="nc">0</span></span>
+        <span>波段:<span id="wv">1</span></span>
+        <span>攻擊:<span id="atk_d">100</span></span>
+        <span>彈數:<span id="qty_d">1</span></span>
+        <span>爆率:<span id="crt_d">5%</span></span>
+        <span>爆傷:<span id="crd_d">200%</span></span>
+        <span>攻速:<span id="spd_d">100%</span></span>
+        <span>範圍:<span id="exp_d">0</span></span>
+    </div> 
+    <div id="status-bar">屬性: <span id="types_d">NORMAL</span></div>
+
+    <div id="ctrl-btns" style="display:none;">
+        <button class="s-btn" onclick="togglePause()" id="pause-btn">暫停</button>
+        <button class="s-btn" onclick="backToMenu()">選單</button>
+    </div>
+
+    <div id="start-menu" class="overlay">
+        <h1 class="title-main">進化守衛：無限防線</h1>
+        <div id="result-info" style="color:#fff; margin-bottom:20px; display:none;"></div>
+        <button class="btn q-gold" onclick="startGame()">進入戰場 (SYSTEM START)</button>
+    </div>
+
+    <div id="upgrade-menu" class="overlay" style="display:none;">
+        <h2 id="up-title" style="color:#fff;">[ 核心進化 ]</h2>
+        <div id="upgrade-options"></div>
+        <button id="all-in-btn" onclick="takeItAll()">★ 我 全 都 要 ★</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="game.js"></script>
+</body>
+</html>
